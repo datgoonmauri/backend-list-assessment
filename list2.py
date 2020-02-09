@@ -15,15 +15,12 @@
 # so [1, 2, 2, 3] returns [1, 2, 3]. You may create a new list or
 # modify the passed in list.
 # Hint: Don't use `set()`
-
 def remove_adjacent(nums):
     adj = nums[:1]
     for item in nums[1:]:
         if item != adj[-1]:
             adj.append(item)
     return adj
-
-
 # E. Given two lists sorted in increasing order, create and return a merged
 # list of all the elements in sorted order. You may modify the passed in lists.
 # The solution should work in "linear" time, making a single pass of both lists.
@@ -40,10 +37,8 @@ def linear_merge(list1, list2):
         else:
             res.append(list2[j])
             j += 1
-    return res + list1[i:] + list2[j:] 
-
-
-# Simple provided test() function used in main() to print
+    return res + list1[i:] + list2[j:]
+    # Simple provided test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
 def test(got, expected):
     if got == expected:
